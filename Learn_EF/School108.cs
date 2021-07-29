@@ -7,6 +7,7 @@ namespace Learn_EF
 {
     public partial class School108
     {
+        public string Id { get; set; }
         public string 學校代碼 { get; set; }
         public string 學校名稱 { get; set; }
         public string 日間進修別 { get; set; }

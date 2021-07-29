@@ -6,16 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="School_108.db" />
+    <None Remove=".db" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="School_108.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
       <PrivateAssets>all</PrivateAssets>

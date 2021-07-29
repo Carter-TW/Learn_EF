@@ -11,13 +11,15 @@ namespace Learn_EF
         }
         public  void Update()
         {
+            
             var db = new School_108Context();
-            var test = db.School108s.First();
-            test.縣市名稱 = "1235";
-            db.SaveChanges();
-             test = db.School108s.First();
-            Console.WriteLine(test.學校名稱);
+            var test = db.School108s.FirstOrDefault();
             Console.WriteLine(test.縣市名稱);
+            test.縣市名稱 = "132213456";
+            db.SaveChanges();
+            test = db.School108s.FirstOrDefault();
+            Console.WriteLine(test.縣市名稱);
+            
         }
     }
     class Program

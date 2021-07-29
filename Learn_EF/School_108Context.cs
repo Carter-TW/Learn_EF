@@ -24,7 +24,7 @@ namespace Learn_EF
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlite("DataSource=School_108.db");
+                optionsBuilder.UseSqlite("Data Source =School_108.db");
             }
         }
 
@@ -32,9 +32,9 @@ namespace Learn_EF
         {
             modelBuilder.Entity<School108>(entity =>
             {
-                entity.HasNoKey();
+                entity.ToTable("School108");
 
-                entity.ToTable("School_108");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.日間進修別).HasColumnName("日間∕進修別");
             });
